@@ -194,6 +194,19 @@ export default function PracticePage({
               />
             ) : null}
 
+            {/* Multi-select confirm button */}
+            {currentQuestion?.questionType === "multi" &&
+              selectedOption &&
+              !isAnswered &&
+              !showFeedback && (
+                <button
+                  onClick={handleConfirmMulti}
+                  className="w-full mt-3 py-3 bg-orange-500 text-white rounded-lg font-medium hover:opacity-90 transition-opacity"
+                >
+                  确认提交（已选 {selectedOption.length} 项）
+                </button>
+            )}
+
             <div className="flex justify-between mt-4">
               <button
                 onClick={handlePrev}

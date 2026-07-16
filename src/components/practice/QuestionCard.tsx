@@ -139,7 +139,10 @@ export function QuestionCard({
             <div>
               <p className="text-sm text-red-700 font-medium">✗ 回答错误</p>
               <p className="text-sm text-red-600 mt-1">
-                <span className="font-bold">正确答案：{question.correctAnswer.split("").join("、")}</span>
+                <span className="font-bold">正确答案：{question.correctAnswer
+                    .split("")
+                    .map((l) => toDisplayLabel(l, shuffleMap))
+                    .join("、")}</span>
               </p>
             </div>
           )}
