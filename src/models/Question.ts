@@ -14,9 +14,12 @@ export interface RawQuestion {
   答题次数: number;
 }
 
+export type QuestionType = "single" | "multi";
+
 export interface Question {
   id: string;
   stem: string;
+  /** 正确答案：单选 "A"，多选 "AB" "ACD" 等 */
   correctAnswer: string;
   optionA: string;
   optionB: string;
@@ -27,6 +30,8 @@ export interface Question {
   categoryA: boolean;
   categoryB: boolean;
   categoryC: boolean;
+  /** 题目类型：单选或多选，默认单选 */
+  questionType: QuestionType;
 }
 
 export type QuestionCategory = "A" | "B" | "C";

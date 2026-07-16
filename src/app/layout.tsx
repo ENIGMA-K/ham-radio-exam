@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   description: "业余无线电操作证考试题库练习与模拟考试",
 };
 
+// GoatCounter 统计代码（替换 YOUR_CODE 为你的站点代码）
+const GOATCOUNTER_CODE = "YOUR_CODE";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,6 +30,13 @@ export default function RootLayout({
       lang="zh-CN"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          data-goatcounter={`https://${GOATCOUNTER_CODE}.goatcounter.com/count`}
+          async
+          src="//gc.zgo.at/count.js"
+        />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

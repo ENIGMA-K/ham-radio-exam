@@ -31,6 +31,7 @@ const transformed = questions.map((q) => ({
   categoryA: q["A类"] === 1,
   categoryB: q["B类"] === 1,
   categoryC: q["C类"] === 1,
+  questionType: "single",
 }));
 
 // Ensure destination directories

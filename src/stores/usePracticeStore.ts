@@ -100,7 +100,14 @@ export const usePracticeStore = create<PracticeState>((set, get) => ({
     const question = state.questionQueue[state.currentIndex];
     if (!question) return;
 
-    const isCorrect = option === question.correctAnswer;
+    let isCorrect = false;
+    if (question.questionType === "multi") {
+      const userSorted = [...option].sort().join("");
+      const correctSorted = [...question.correctAnswer].sort().join("");
+      isCorrect = userSorted === correctSorted;
+    } else {
+      isCorrect = option === question.correctAnswer;
+    }
 
     set({
       answers: {

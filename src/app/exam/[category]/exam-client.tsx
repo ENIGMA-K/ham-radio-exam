@@ -10,7 +10,7 @@ import { ExamTimer } from "@/components/exam/ExamTimer";
 import { ExamResultCard } from "@/components/exam/ExamResultCard";
 import { useExamStore } from "@/stores/useExamStore";
 import { useUIStore } from "@/stores/useUIStore";
-import { CATEGORY_CONFIG } from "@/lib/constants";
+import { CATEGORY_CONFIG, examTotalQuestions } from "@/lib/constants";
 import type { QuestionCategory } from "@/models/Question";
 
 
@@ -84,7 +84,10 @@ export default function ExamPage({
             <div className="text-center space-y-4">
               <h2 className="text-xl font-bold">{config.label} · 模拟考试</h2>
               <p className="text-[var(--muted)]">
-                {config.examQuestionCount} 题 · {config.examTimeMinutes} 分钟
+                {examTotalQuestions(validCategory)} 题 · {config.examTimeMinutes} 分钟
+              </p>
+              <p className="text-xs text-[var(--muted)]">
+                单选 {config.singleChoiceCount} 题 + 多选 {config.multiChoiceCount} 题
               </p>
               <p className="text-sm text-[var(--muted)]">
                 考试开始后将计时，时间到自动交卷

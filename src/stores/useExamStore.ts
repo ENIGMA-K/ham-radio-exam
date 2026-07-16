@@ -4,7 +4,7 @@ import type { ExamResult } from "@/models/ExamResult";
 import { useQuestionBankStore } from "./useQuestionBankStore";
 import { useProgressStore } from "./useProgressStore";
 import { DexieExamRepository } from "@/repositories/examRepo";
-import { CATEGORY_CONFIG } from "@/lib/constants";
+import { CATEGORY_CONFIG, examTotalQuestions } from "@/lib/constants";
 import { shuffleArray } from "@/lib/utils";
 
 type ExamStatus = "not-started" | "in-progress" | "submitted";
@@ -50,8 +50,12 @@ export const useExamStore = create<ExamState>((set, get) => ({
       .getByCategory(category);
 
     const config = CATEGORY_CONFIG[category];
-    const count = Math.min(config.examQuestionCount, allCategoryQuestions.length);
-    const selected = shuffleArray(allCategoryQuestions).slice(0, count);
+    const singles = allCategoryQuestions.filter((q) => q.questionType === "single");
+    const multis = allCategoryQuestions.filter((q) => q.questionType === "multi");
+
+    const selectedSingles = shuffleArray(singles).slice(0, config.singleChoiceCount);
+    const selectedMultis = shuffleArray(multis).slice(0, config.multiChoiceCount);
+    const selected = shuffleArray([...selectedSingles, ...selectedMultis]);
 
     const answers: Record<string, string | null> = {};
     for (const q of selected) {
@@ -105,10 +109,19 @@ export const useExamStore = create<ExamState>((set, get) => ({
     const questionResults: ExamResult["questionResults"] = state.questions.map(
       (q) => {
         const selected = state.answers[q.id] ?? null;
+        let isCorrect = false;
+        if (q.questionType === "multi") {
+          // Multi-select: must match exactly
+          const userSorted = selected ? [...selected].sort().join("") : "";
+          const correctSorted = [...q.correctAnswer].sort().join("");
+          isCorrect = userSorted === correctSorted;
+        } else {
+          isCorrect = selected === q.correctAnswer;
+        }
         return {
           questionId: q.id,
           selectedAnswer: selected,
-          isCorrect: selected === q.correctAnswer,
+          isCorrect,
         };
       }
     );

@@ -1,7 +1,7 @@
 "use client";
 
 import type { ExamResult } from "@/models/ExamResult";
-import { CATEGORY_CONFIG } from "@/lib/constants";
+import { CATEGORY_CONFIG, examTotalQuestions } from "@/lib/constants";
 import { formatTime, formatDate } from "@/lib/utils";
 
 interface ExamResultCardProps {
@@ -12,29 +12,36 @@ interface ExamResultCardProps {
 
 export function ExamResultCard({ result, onRestart, onGoHome }: ExamResultCardProps) {
   const config = CATEGORY_CONFIG[result.category];
+  const passed = result.correctCount >= config.passingScore;
   const answeredPct =
     result.totalQuestions > 0
       ? Math.round((result.answeredQuestions / result.totalQuestions) * 100)
       : 0;
 
-  const getScoreColor = () => {
-    if (result.score >= 80) return "text-[var(--success)]";
-    if (result.score >= 60) return "text-[var(--warning)]";
-    return "text-[var(--danger)]";
-  };
-
   return (
     <div className="max-w-lg mx-auto space-y-4">
+      {/* Score + Pass/Fail */}
       <div className="bg-[var(--surface)] rounded-xl border border-[var(--border)] p-6 text-center">
         <p className="text-sm text-[var(--muted)] mb-2">
           {config.label} · 模拟考试
         </p>
-        <p className={`text-5xl font-bold mb-1 ${getScoreColor()}`}>
+        <p className={`text-5xl font-bold mb-1 ${passed ? "text-[var(--success)]" : "text-[var(--danger)]"}`}>
           {result.score}
         </p>
         <p className="text-sm text-[var(--muted)]">分</p>
+        <div className={`mt-3 inline-block px-4 py-1 rounded-full text-sm font-bold ${
+          passed
+            ? "bg-green-50 text-[var(--success)] border border-green-200"
+            : "bg-red-50 text-[var(--danger)] border border-red-200"
+        }`}>
+          {passed ? "✓ 合格" : "✗ 不合格"}
+        </div>
+        <p className="text-xs text-[var(--muted)] mt-1">
+          合格标准：答对 {config.passingScore} 题及以上（多选题需完全匹配）
+        </p>
       </div>
 
+      {/* Stat grid */}
       <div className="bg-[var(--surface)] rounded-xl border border-[var(--border)] p-5">
         <div className="grid grid-cols-2 gap-4">
           <div className="text-center">
