@@ -76,9 +76,21 @@ export default function PracticePage({
 
   const handleSelect = (option: string) => {
     if (!currentQuestion || isAnswered) return;
+    // For multi-select: just update visual selection, don't submit yet
+    if (currentQuestion.questionType === "multi") {
+      setSelectedOption(option);
+      return;
+    }
+    // For single-select: submit immediately
     setSelectedOption(option);
     setShowFeedback(true);
     answerQuestion(option);
+  };
+
+  const handleConfirmMulti = () => {
+    if (!currentQuestion || !selectedOption) return;
+    setShowFeedback(true);
+    answerQuestion(selectedOption);
   };
 
   const handleNext = () => {
