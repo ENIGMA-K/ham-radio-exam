@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 // GoatCounter 统计代码（替换 YOUR_CODE 为你的站点代码）
-const GOATCOUNTER_CODE = "YOUR_CODE";
+const GOATCOUNTER_CODE = "enigmak";
 
 export default function RootLayout({
   children,
