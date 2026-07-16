@@ -1,26 +1,100 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #f5f5f5;
+  --foreground: #1a1a1a;
+  --primary: #3b82f6;
+  --primary-light: #dbeafe;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --surface: #ffffff;
+  --border: #e5e7eb;
+  --muted: #6b7280;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Question option buttons */
+.option-btn {
+  @apply w-full text-left px-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--surface)] transition-all duration-150;
+}
+
+.option-btn:hover {
+  @apply border-[var(--primary)] bg-[var(--primary-light)];
+}
+
+.option-btn.selected {
+  @apply border-[var(--primary)] bg-[var(--primary-light)] ring-2 ring-blue-500/30;
+}
+
+.option-btn.correct {
+  @apply border-[var(--success)] bg-green-50 ring-2 ring-green-500/30;
+}
+
+.option-btn.wrong {
+  @apply border-[var(--danger)] bg-red-50 ring-2 ring-red-500/30;
+}
+
+/* Answer sheet grid */
+.answer-dot {
+  @apply w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium cursor-pointer transition-colors;
+}
+
+.answer-dot.correct {
+  @apply bg-[var(--success)] text-white;
+}
+
+.answer-dot.wrong {
+  @apply bg-[var(--danger)] text-white;
+}
+
+.answer-dot.unanswered {
+  @apply bg-gray-200 text-gray-500;
+}
+
+.answer-dot.current {
+  @apply ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* Progress bar */
+.progress-bar {
+  @apply h-2 rounded-full bg-gray-200 overflow-hidden;
+}
+
+.progress-bar-fill {
+  @apply h-full rounded-full transition-all duration-300;
+}
+
+/* Tab styles */
+.mode-tab {
+  @apply flex-1 text-center py-2.5 text-sm font-medium rounded-lg transition-colors;
+}
+
+.mode-tab.active {
+  @apply bg-[var(--primary)] text-white;
+}
+
+.mode-tab.inactive {
+  @apply text-[var(--muted)] hover:bg-gray-100;
 }
