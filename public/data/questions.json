@@ -162,7 +162,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC1-0016",
@@ -177,7 +177,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC1-0017",
@@ -16887,7 +16887,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0002",
@@ -16902,7 +16902,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0015",
@@ -16917,7 +16917,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0019",
@@ -16932,7 +16932,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0031",
@@ -16947,7 +16947,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0035",
@@ -16962,7 +16962,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0044",
@@ -16977,7 +16977,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0045",
@@ -16992,7 +16992,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0046",
@@ -17007,7 +17007,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0049",
@@ -17022,7 +17022,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0058",
@@ -17037,7 +17037,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0062",
@@ -17052,7 +17052,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0063",
@@ -17067,7 +17067,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0064",
@@ -17082,7 +17082,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0065",
@@ -17097,7 +17097,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0068",
@@ -17112,7 +17112,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0069",
@@ -17127,7 +17127,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0071",
@@ -17142,7 +17142,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0075",
@@ -17157,7 +17157,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0077",
@@ -17172,7 +17172,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0080",
@@ -17187,7 +17187,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0100",
@@ -17202,7 +17202,7 @@
     "categoryA": true,
     "categoryB": false,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0111",
@@ -17217,7 +17217,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0151",
@@ -17232,7 +17232,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0152",
@@ -17247,7 +17247,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0154",
@@ -17262,7 +17262,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0155",
@@ -17277,7 +17277,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0157",
@@ -17292,7 +17292,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0158",
@@ -17307,7 +17307,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0159",
@@ -17322,7 +17322,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0162",
@@ -17337,7 +17337,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0163",
@@ -17352,7 +17352,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0164",
@@ -17367,7 +17367,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0165",
@@ -17382,7 +17382,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0166",
@@ -17397,7 +17397,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0167",
@@ -17412,7 +17412,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0169",
@@ -17427,7 +17427,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0214",
@@ -17442,7 +17442,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0448",
@@ -17457,7 +17457,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0452",
@@ -17472,7 +17472,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0454",
@@ -17487,7 +17487,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0465",
@@ -17502,7 +17502,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0468",
@@ -17517,7 +17517,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0474",
@@ -17532,7 +17532,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0507",
@@ -17547,7 +17547,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0508",
@@ -17562,7 +17562,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0510",
@@ -17577,7 +17577,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0549",
@@ -17592,7 +17592,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0566",
@@ -17607,7 +17607,7 @@
     "categoryA": true,
     "categoryB": false,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0582",
@@ -17622,7 +17622,7 @@
     "categoryA": true,
     "categoryB": false,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0605",
@@ -17637,7 +17637,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0628",
@@ -17652,7 +17652,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0638",
@@ -17667,7 +17667,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0640",
@@ -17682,7 +17682,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0641",
@@ -17697,7 +17697,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0651",
@@ -17712,7 +17712,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0659",
@@ -17727,7 +17727,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0660",
@@ -17742,7 +17742,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0672",
@@ -17757,7 +17757,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0680",
@@ -17772,7 +17772,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0681",
@@ -17787,7 +17787,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0682",
@@ -17802,7 +17802,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0689",
@@ -17817,7 +17817,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0690",
@@ -17832,7 +17832,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0712",
@@ -17847,7 +17847,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0762",
@@ -17862,7 +17862,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0767",
@@ -17877,7 +17877,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0774",
@@ -17892,7 +17892,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0785",
@@ -17907,7 +17907,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0795",
@@ -17922,7 +17922,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0800",
@@ -17937,7 +17937,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0804",
@@ -17952,7 +17952,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0836",
@@ -17967,7 +17967,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0896",
@@ -17982,7 +17982,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0897",
@@ -17997,7 +17997,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0898",
@@ -18012,7 +18012,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0900",
@@ -18027,7 +18027,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0916",
@@ -18042,7 +18042,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0925",
@@ -18057,7 +18057,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0926",
@@ -18072,7 +18072,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0938",
@@ -18087,7 +18087,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-0974",
@@ -18102,7 +18102,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1056",
@@ -18117,7 +18117,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1083",
@@ -18132,7 +18132,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1084",
@@ -18147,7 +18147,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1099",
@@ -18162,7 +18162,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1100",
@@ -18177,7 +18177,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1104",
@@ -18192,7 +18192,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1124",
@@ -18207,7 +18207,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1144",
@@ -18222,7 +18222,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1147",
@@ -18237,7 +18237,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1196",
@@ -18252,7 +18252,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1198",
@@ -18267,7 +18267,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1200",
@@ -18282,7 +18282,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1201",
@@ -18297,7 +18297,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1202",
@@ -18312,7 +18312,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1203",
@@ -18327,7 +18327,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1206",
@@ -18342,7 +18342,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1213",
@@ -18357,7 +18357,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1217",
@@ -18372,7 +18372,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1229",
@@ -18387,7 +18387,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1233",
@@ -18402,7 +18402,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1234",
@@ -18417,7 +18417,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1246",
@@ -18432,7 +18432,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1251",
@@ -18447,7 +18447,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1252",
@@ -18462,7 +18462,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1260",
@@ -18477,7 +18477,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1267",
@@ -18492,7 +18492,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1287",
@@ -18507,7 +18507,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1294",
@@ -18522,7 +18522,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1297",
@@ -18537,7 +18537,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1302",
@@ -18552,7 +18552,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1337",
@@ -18567,7 +18567,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1338",
@@ -18582,7 +18582,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1339",
@@ -18597,7 +18597,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1340",
@@ -18612,7 +18612,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1347",
@@ -18627,7 +18627,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1348",
@@ -18642,7 +18642,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC2-1353",
@@ -18657,7 +18657,7 @@
     "categoryA": true,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0018",
@@ -18672,7 +18672,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0020",
@@ -18687,7 +18687,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0027",
@@ -18702,7 +18702,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0028",
@@ -18717,7 +18717,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0034",
@@ -18732,7 +18732,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0040",
@@ -18747,7 +18747,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0047",
@@ -18762,7 +18762,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0048",
@@ -18777,7 +18777,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0056",
@@ -18792,7 +18792,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0057",
@@ -18807,7 +18807,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0072",
@@ -18822,7 +18822,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0078",
@@ -18837,7 +18837,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0082",
@@ -18852,7 +18852,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0083",
@@ -18867,7 +18867,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0084",
@@ -18882,7 +18882,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0087",
@@ -18897,7 +18897,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0092",
@@ -18912,7 +18912,7 @@
     "categoryA": true,
     "categoryB": false,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0094",
@@ -18927,7 +18927,7 @@
     "categoryA": true,
     "categoryB": false,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0095",
@@ -18942,7 +18942,7 @@
     "categoryA": true,
     "categoryB": false,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0096",
@@ -18957,7 +18957,7 @@
     "categoryA": true,
     "categoryB": false,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0104",
@@ -18972,7 +18972,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0119",
@@ -18987,7 +18987,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0133",
@@ -19002,7 +19002,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0134",
@@ -19017,7 +19017,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0138",
@@ -19032,7 +19032,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0153",
@@ -19047,7 +19047,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0478",
@@ -19062,7 +19062,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0496",
@@ -19077,7 +19077,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0499",
@@ -19092,7 +19092,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0501",
@@ -19107,7 +19107,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0512",
@@ -19122,7 +19122,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0514",
@@ -19137,7 +19137,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0567",
@@ -19152,7 +19152,7 @@
     "categoryA": true,
     "categoryB": false,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0585",
@@ -19167,7 +19167,7 @@
     "categoryA": true,
     "categoryB": false,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0633",
@@ -19182,7 +19182,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0643",
@@ -19197,7 +19197,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0670",
@@ -19212,7 +19212,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0752",
@@ -19227,7 +19227,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0753",
@@ -19242,7 +19242,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0761",
@@ -19257,7 +19257,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0772",
@@ -19272,7 +19272,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0799",
@@ -19287,7 +19287,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0887",
@@ -19302,7 +19302,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0888",
@@ -19317,7 +19317,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0917",
@@ -19332,7 +19332,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0919",
@@ -19347,7 +19347,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0920",
@@ -19362,7 +19362,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0923",
@@ -19377,7 +19377,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0924",
@@ -19392,7 +19392,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0968",
@@ -19407,7 +19407,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-0969",
@@ -19422,7 +19422,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1074",
@@ -19437,7 +19437,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1086",
@@ -19452,7 +19452,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1088",
@@ -19467,7 +19467,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1105",
@@ -19482,7 +19482,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1108",
@@ -19497,7 +19497,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1109",
@@ -19512,7 +19512,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1110",
@@ -19527,7 +19527,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1117",
@@ -19542,7 +19542,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1118",
@@ -19557,7 +19557,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1119",
@@ -19572,7 +19572,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1121",
@@ -19587,7 +19587,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1180",
@@ -19602,7 +19602,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1181",
@@ -19617,7 +19617,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1187",
@@ -19632,7 +19632,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1197",
@@ -19647,7 +19647,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1199",
@@ -19662,7 +19662,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1216",
@@ -19677,7 +19677,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1220",
@@ -19692,7 +19692,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1231",
@@ -19707,7 +19707,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1269",
@@ -19722,7 +19722,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1272",
@@ -19737,7 +19737,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1284",
@@ -19752,7 +19752,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1289",
@@ -19767,7 +19767,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1295",
@@ -19782,7 +19782,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1316",
@@ -19797,7 +19797,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1341",
@@ -19812,7 +19812,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1342",
@@ -19827,7 +19827,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1343",
@@ -19842,7 +19842,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1344",
@@ -19857,7 +19857,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1349",
@@ -19872,7 +19872,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1350",
@@ -19887,7 +19887,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1356",
@@ -19902,7 +19902,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1369",
@@ -19917,7 +19917,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC3-1372",
@@ -19932,7 +19932,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0012",
@@ -19947,7 +19947,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0029",
@@ -19962,7 +19962,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0032",
@@ -19977,7 +19977,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0050",
@@ -19992,7 +19992,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0066",
@@ -20007,7 +20007,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0067",
@@ -20022,7 +20022,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0070",
@@ -20037,7 +20037,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0079",
@@ -20052,7 +20052,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0081",
@@ -20067,7 +20067,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0088",
@@ -20082,7 +20082,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0093",
@@ -20097,7 +20097,7 @@
     "categoryA": true,
     "categoryB": false,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0097",
@@ -20112,7 +20112,7 @@
     "categoryA": true,
     "categoryB": false,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0098",
@@ -20127,7 +20127,7 @@
     "categoryA": true,
     "categoryB": false,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0099",
@@ -20142,7 +20142,7 @@
     "categoryA": true,
     "categoryB": false,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0131",
@@ -20157,7 +20157,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0132",
@@ -20172,7 +20172,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0135",
@@ -20187,7 +20187,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0136",
@@ -20202,7 +20202,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0137",
@@ -20217,7 +20217,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0142",
@@ -20232,7 +20232,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0144",
@@ -20247,7 +20247,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0145",
@@ -20262,7 +20262,7 @@
     "categoryA": true,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0171",
@@ -20277,7 +20277,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0173",
@@ -20292,7 +20292,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0213",
@@ -20307,7 +20307,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0276",
@@ -20322,7 +20322,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0277",
@@ -20337,7 +20337,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0449",
@@ -20352,7 +20352,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0480",
@@ -20367,7 +20367,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0511",
@@ -20382,7 +20382,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0513",
@@ -20397,7 +20397,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0515",
@@ -20412,7 +20412,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0808",
@@ -20427,7 +20427,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0821",
@@ -20442,7 +20442,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0918",
@@ -20457,7 +20457,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0922",
@@ -20472,7 +20472,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": false,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-0965",
@@ -20487,7 +20487,7 @@
     "categoryA": true,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-1027",
@@ -20502,7 +20502,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-1054",
@@ -20517,7 +20517,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-1055",
@@ -20532,7 +20532,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-1089",
@@ -20547,7 +20547,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-1114",
@@ -20562,7 +20562,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-1126",
@@ -20577,7 +20577,7 @@
     "categoryA": false,
     "categoryB": true,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-1232",
@@ -20592,7 +20592,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-1290",
@@ -20607,7 +20607,7 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   },
   {
     "id": "MC4-1296",
@@ -20622,6 +20622,6 @@
     "categoryA": false,
     "categoryB": false,
     "categoryC": true,
-    "questionType": "single"
+    "questionType": "multi"
   }
 ]

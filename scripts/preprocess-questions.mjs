@@ -31,7 +31,7 @@ const transformed = questions.map((q) => ({
   categoryA: q["A类"] === 1,
   categoryB: q["B类"] === 1,
   categoryC: q["C类"] === 1,
-  questionType: "single",
+  questionType: q["正确答案"].length > 1 ? "multi" : "single",
 }));
 
 // Ensure destination directories
