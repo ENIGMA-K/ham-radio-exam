@@ -150,6 +150,7 @@ export default function ExamPage({
             {currentQuestion && (
               <QuestionCard
                 question={currentQuestion}
+                shuffleMap={shuffleMaps[currentQuestion?.id ?? ""]}
                 selectedOption={answers[currentQuestion.id] ?? null}
                 showFeedback={false}
                 onSelect={handleSelect}

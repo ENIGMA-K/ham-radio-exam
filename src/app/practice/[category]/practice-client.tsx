@@ -183,6 +183,7 @@ export default function PracticePage({
             {currentQuestion ? (
               <QuestionCard
                 question={currentQuestion}
+                shuffleMap={shuffleMaps[currentQuestion?.id ?? ""]}
                 selectedOption={
                   isAnswered
                     ? currentAnswer?.selectedOption ?? null
