@@ -4,8 +4,8 @@ import type { ExamResult } from "@/models/ExamResult";
 import { useQuestionBankStore } from "./useQuestionBankStore";
 import { useProgressStore } from "./useProgressStore";
 import { DexieExamRepository } from "@/repositories/examRepo";
-import { CATEGORY_CONFIG, examTotalQuestions } from "@/lib/constants";
-import { shuffleArray } from "@/lib/utils";
+import { CATEGORY_CONFIG } from "@/lib/constants";
+import { shuffleArray, shuffleOptions } from "@/lib/utils";
 
 type ExamStatus = "not-started" | "in-progress" | "submitted";
 
@@ -14,6 +14,8 @@ interface ExamState {
   status: ExamStatus;
 
   questions: Question[];
+  /** Per-question option shuffle map: display label → original label */
+  shuffleMaps: Record<string, Record<string, string>>;
   currentIndex: number;
   answers: Record<string, string | null>;
 
@@ -37,6 +39,7 @@ export const useExamStore = create<ExamState>((set, get) => ({
   category: null,
   status: "not-started",
   questions: [],
+  shuffleMaps: {},
   currentIndex: 0,
   answers: {},
   timeLimit: 0,
@@ -62,12 +65,20 @@ export const useExamStore = create<ExamState>((set, get) => ({
       answers[q.id] = null;
     }
 
+    // Generate shuffle map for each question
+    const shuffleMaps: Record<string, Record<string, string>> = {};
+    for (const q of selected) {
+      const { mapToOriginal } = shuffleOptions();
+      shuffleMaps[q.id] = mapToOriginal;
+    }
+
     const timeLimit = config.examTimeMinutes * 60;
 
     set({
       category,
       status: "in-progress",
       questions: selected,
+      shuffleMaps,
       currentIndex: 0,
       answers,
       timeLimit,
@@ -108,10 +119,15 @@ export const useExamStore = create<ExamState>((set, get) => ({
 
     const questionResults: ExamResult["questionResults"] = state.questions.map(
       (q) => {
-        const selected = state.answers[q.id] ?? null;
+        const selectedDisplay = state.answers[q.id] ?? null;
+        // Convert display letters to original letters
+        const mapToOriginal = state.shuffleMaps[q.id];
+        const selected = selectedDisplay
+          ? [...selectedDisplay].map((ch) => mapToOriginal[ch] ?? ch).join("")
+          : null;
+
         let isCorrect = false;
         if (q.questionType === "multi") {
-          // Multi-select: must match exactly
           const userSorted = selected ? [...selected].sort().join("") : "";
           const correctSorted = [...q.correctAnswer].sort().join("");
           isCorrect = userSorted === correctSorted;
@@ -156,7 +172,6 @@ export const useExamStore = create<ExamState>((set, get) => ({
     const id = await examRepo.saveResult(result);
     result.id = id;
 
-    // Record each answer to progress
     const progressStore = useProgressStore.getState();
     for (const r of questionResults) {
       if (r.selectedAnswer !== null) {
@@ -172,6 +187,7 @@ export const useExamStore = create<ExamState>((set, get) => ({
       category: null,
       status: "not-started",
       questions: [],
+      shuffleMaps: {},
       currentIndex: 0,
       answers: {},
       timeLimit: 0,

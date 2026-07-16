@@ -9,46 +9,61 @@ interface QuestionCardProps {
   selectedOption: string | null;
   showFeedback: boolean;
   onSelect: (option: string) => void;
+  /** Shuffle map: display label → original label. If omitted, uses default A→A, B→B... */
+  shuffleMap?: Record<string, string>;
 }
 
-const OPTION_LABELS = ["A", "B", "C", "D"] as const;
-const ALL_LETTERS = "ABCD";
+const DISPLAY_LABELS = ["A", "B", "C", "D"] as const;
+
+function toOriginalLabel(display: string, map?: Record<string, string>): string {
+  return map?.[display] ?? display;
+}
+
+function toDisplayLabel(original: string, map?: Record<string, string>): string {
+  if (!map) return original;
+  for (const [k, v] of Object.entries(map)) {
+    if (v === original) return k;
+  }
+  return original;
+}
 
 export function QuestionCard({
   question,
   selectedOption,
   showFeedback,
   onSelect,
+  shuffleMap,
 }: QuestionCardProps) {
   const isMulti = question.questionType === "multi";
   const selectedSet = new Set(selectedOption?.split("") ?? []);
-  const correctSet = new Set(question.correctAnswer.split(""));
+  const correctOriginalLabels = question.correctAnswer.split("");
+  // Convert correct original labels to display labels for highlighting
+  const correctDisplaySet = new Set(
+    correctOriginalLabels.map((l) => toDisplayLabel(l, shuffleMap))
+  );
 
   const getOptionState = (label: string): "default" | "selected" | "correct" | "wrong" => {
     if (!showFeedback) {
       return selectedSet.has(label) ? "selected" : "default";
     }
-    // Show feedback
-    const isCorrect = correctSet.has(label);
+    const isCorrectDisplay = correctDisplaySet.has(label);
     const isSelected = selectedSet.has(label);
-    if (isCorrect) return "correct";
-    if (isSelected && !isCorrect) return "wrong";
+    if (isCorrectDisplay) return "correct";
+    if (isSelected) return "wrong";
     return "default";
   };
 
-  const handleClick = (label: string) => {
+  const handleClick = (displayLabel: string) => {
     if (isMulti) {
-      // Toggle multi-select
       const next = new Set(selectedSet);
-      if (next.has(label)) {
-        next.delete(label);
+      if (next.has(displayLabel)) {
+        next.delete(displayLabel);
       } else {
-        next.add(label);
+        next.add(displayLabel);
       }
       onSelect([...next].sort().join(""));
     } else {
-      // Single select
-      onSelect(label);
+      onSelect(displayLabel);
     }
   };
 
@@ -56,11 +71,16 @@ export function QuestionCard({
   const isAnswerCorrect = (() => {
     if (!showFeedback || !selectedOption) return null;
     if (isMulti) {
-      const userSorted = [...selectedOption].sort().join("");
+      // Convert display labels to original for comparison
+      const originalSelected = [...selectedOption]
+        .map((l) => toOriginalLabel(l, shuffleMap))
+        .sort()
+        .join("");
       const correctSorted = [...question.correctAnswer].sort().join("");
-      return userSorted === correctSorted;
+      return originalSelected === correctSorted;
     }
-    return selectedOption === question.correctAnswer;
+    const originalSelected = toOriginalLabel(selectedOption, shuffleMap);
+    return originalSelected === question.correctAnswer;
   })();
 
   return (
@@ -87,17 +107,24 @@ export function QuestionCard({
       )}
 
       <div className="space-y-2.5">
-        {OPTION_LABELS.map((label) => (
-          <OptionButton
-            key={label}
-            label={label}
-            text={question[`option${label}` as keyof Question] as string}
-            state={getOptionState(label)}
-            onClick={() => handleClick(label)}
-            disabled={showFeedback}
-            isMulti={isMulti}
-          />
-        ))}
+        {DISPLAY_LABELS.map((displayLabel) => {
+          // Get the original label for this display position
+          const originalLabel = toOriginalLabel(displayLabel, shuffleMap);
+          // Get the option text from the original position
+          const text = question[`option${originalLabel}` as keyof Question] as string;
+
+          return (
+            <OptionButton
+              key={displayLabel}
+              label={displayLabel}
+              text={text}
+              state={getOptionState(displayLabel)}
+              onClick={() => handleClick(displayLabel)}
+              disabled={showFeedback}
+              isMulti={isMulti}
+            />
+          );
+        })}
       </div>
 
       {showFeedback && (

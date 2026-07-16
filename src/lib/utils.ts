@@ -7,6 +7,24 @@ export function shuffleArray<T>(array: T[]): T[] {
   return shuffled;
 }
 
+/** Shuffle option order. Returns { shuffledOptions, mapFromOriginal, mapToOriginal } */
+export function shuffleOptions() {
+  const labels = ["A", "B", "C", "D"] as const;
+  const shuffled = shuffleArray([...labels]);
+
+  // mapFromOriginal: original label → display position label
+  const mapFromOriginal: Record<string, string> = {};
+  // mapToOriginal: display position label → original label
+  const mapToOriginal: Record<string, string> = {};
+
+  for (let i = 0; i < labels.length; i++) {
+    mapFromOriginal[labels[i]] = shuffled[i];
+    mapToOriginal[shuffled[i]] = labels[i];
+  }
+
+  return { mapFromOriginal, mapToOriginal };
+}
+
 export function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60);
   const secs = seconds % 60;

@@ -2,7 +2,7 @@ import { create } from "zustand";
 import type { Question, QuestionCategory, PracticeMode } from "@/models/Question";
 import { useQuestionBankStore } from "./useQuestionBankStore";
 import { useProgressStore } from "./useProgressStore";
-import { shuffleArray } from "@/lib/utils";
+import { shuffleArray, shuffleOptions } from "@/lib/utils";
 import { errorRate } from "@/lib/utils";
 
 interface PracticeAnswer {
@@ -16,6 +16,8 @@ interface PracticeState {
   mode: PracticeMode;
 
   questionQueue: Question[];
+  /** Per-question option shuffle map: display label → original label */
+  shuffleMaps: Record<string, Record<string, string>>;
   currentIndex: number;
   answers: Record<string, PracticeAnswer>;
   isSessionActive: boolean;
@@ -32,6 +34,7 @@ export const usePracticeStore = create<PracticeState>((set, get) => ({
   category: null,
   mode: "sequential",
   questionQueue: [],
+  shuffleMaps: {},
   currentIndex: 0,
   answers: {},
   isSessionActive: false,
@@ -58,9 +61,6 @@ export const usePracticeStore = create<PracticeState>((set, get) => ({
           const p = progressMap[q.id];
           return p && p.wrongCount > p.correctCount;
         });
-        if (queue.length === 0) {
-          queue = [];
-        }
         break;
       }
 
@@ -83,10 +83,18 @@ export const usePracticeStore = create<PracticeState>((set, get) => ({
         queue = [...questions];
     }
 
+    // Generate shuffle map for each question
+    const shuffleMaps: Record<string, Record<string, string>> = {};
+    for (const q of queue) {
+      const { mapToOriginal } = shuffleOptions();
+      shuffleMaps[q.id] = mapToOriginal;
+    }
+
     set({
       category,
       mode,
       questionQueue: queue,
+      shuffleMaps,
       currentIndex: 0,
       answers: {},
       isSessionActive: true,
@@ -100,13 +108,19 @@ export const usePracticeStore = create<PracticeState>((set, get) => ({
     const question = state.questionQueue[state.currentIndex];
     if (!question) return;
 
+    // Convert display letters to original letters using shuffle map
+    const mapToOriginal = state.shuffleMaps[question.id];
+    const originalOption = [...option]
+      .map((ch) => mapToOriginal[ch] ?? ch)
+      .join("");
+
     let isCorrect = false;
     if (question.questionType === "multi") {
-      const userSorted = [...option].sort().join("");
+      const userSorted = [...originalOption].sort().join("");
       const correctSorted = [...question.correctAnswer].sort().join("");
       isCorrect = userSorted === correctSorted;
     } else {
-      isCorrect = option === question.correctAnswer;
+      isCorrect = originalOption === question.correctAnswer;
     }
 
     set({
@@ -145,6 +159,6 @@ export const usePracticeStore = create<PracticeState>((set, get) => ({
   },
 
   endSession: () => {
-    set({ isSessionActive: false, questionQueue: [], answers: {} });
+    set({ isSessionActive: false, questionQueue: [], shuffleMaps: {}, answers: {} });
   },
 }));

@@ -37,6 +37,7 @@ export default function ExamPage({
   const tick = useExamStore((s) => s.tick);
   const submitExam = useExamStore((s) => s.submitExam);
   const resetExam = useExamStore((s) => s.resetExam);
+  const shuffleMaps = useExamStore((s) => s.shuffleMaps);
 
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
 

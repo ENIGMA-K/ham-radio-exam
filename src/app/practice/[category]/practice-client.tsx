@@ -35,6 +35,7 @@ export default function PracticePage({
   const goToPrev = usePracticeStore((s) => s.goToPrev);
   const jumpTo = usePracticeStore((s) => s.jumpTo);
   const endSession = usePracticeStore((s) => s.endSession);
+  const shuffleMaps = usePracticeStore((s) => s.shuffleMaps);
 
   const [showFeedback, setShowFeedback] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
