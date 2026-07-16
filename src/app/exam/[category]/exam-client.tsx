@@ -175,7 +175,7 @@ export default function ExamPage({
           </div>
 
           {sidebarOpen && (
-            <aside className="lg:w-64 bg-[var(--surface)] border-l border-[var(--border)]">
+            <aside className="lg:w-64 bg-[var(--surface)] border-l border-[var(--border)] lg:sticky lg:top-[57px] lg:h-[calc(100vh-57px)] lg:overflow-hidden flex flex-col">
               <AnswerSheet
                 totalQuestions={questions.length}
                 currentIndex={currentIndex}
