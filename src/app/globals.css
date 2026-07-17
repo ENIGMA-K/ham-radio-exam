@@ -299,3 +299,18 @@ body {
   border-radius: 6px; font-size: 0.8rem; overflow-x: auto;
   font-family: monospace;
 }
+
+.study-content .diagram-tree { display: flex; flex-direction: column; align-items: center; gap: 0.1rem; }
+.study-content .diagram-branch { color: var(--muted); font-size: 1.2rem; }
+.study-content .diagram-split { display: flex; gap: 3rem; justify-content: center; }
+.study-content .diagram-node.root { background: #eff6ff; border-color: #93c5fd; }
+.study-content .mini-table { width: 100%; font-size: 0.78rem; margin: 0.5rem 0 0; }
+.study-content .mini-table td { padding: 0.2rem 0.3rem; border-bottom: 1px solid #f1f5f9; }
+.study-content .diagram-step b {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.4rem; height: 1.4rem; background: var(--primary); color: white;
+  border-radius: 50%; font-size: 0.7rem; margin-right: 0.3rem;
+}
+.study-content .diagram-card span, .study-content .diagram-node span, .study-content .diagram-step span {
+  font-size: 0.75rem; color: var(--muted); display: block; margin-top: 0.15rem;
+}

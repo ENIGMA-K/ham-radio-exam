@@ -13,21 +13,15 @@
 
 <div class="callout callout-note"><strong>📝 法规层级关系</strong>
 
-
 </div>
-<div class="diagram-box">
-<div class="diagram-title">法规层级关系</div>
-<div class="diagram-flow">
-<div class="diagram-node primary">《中华人民共和国无线电管理条例》<br><span class="sub">行政法规 · 最高层级</span></div>
-<div class="diagram-arrow">▼</div>
-<div class="diagram-node">《业余无线电台管理办法》<br><span class="sub">部门规章 · 具体规定</span></div>
-<div class="diagram-arrow">▼</div>
-<div class="diagram-row">
-<div class="diagram-node leaf">《无线电频率划分规定》<br><span class="sub">定义频段与业务</span></div>
-<div class="diagram-node leaf">地方无线电管理机构规定<br><span class="sub">区域性实施细则</span></div>
-</div>
-</div>
-</div>
+<div class="diagram-box"><pre class="diagram-code">graph TD
+<p>A["《中华人民共和国无线电管理条例》<br/>行政法规·最高层级"] --> B["《业余无线电台管理办法》<br/>部门规章·具体规定"]</p>
+<p>B --> C["《中华人民共和国无线电频率划分规定》<br/>定义频段与业务"]</p>
+<p>B --> D["地方无线电管理机构规定<br/>区域性实施细则"]</p>
+<p>style A fill:#e1f5fe,stroke:#01579b</p>
+<p>style B fill:#fff3e0,stroke:#e65100</p>
+<p>style C fill:#e8f5e9,stroke:#1b5e20</p>
+<p>style D fill:#f3e5f5,stroke:#4a148c</pre></div></p>
 
 
 <div class="callout callout-important"><strong>⚠️ 必记</strong>
@@ -35,26 +29,7 @@
 <p>最新《业余无线电台管理办法》自 <strong>2024 年 3 月 1 日</strong>起施行。</p>
 
 </div>
-<h4>频率管理的三个核心概念（"划分"、"分配"、"指配"）</h4>
-<div class="diagram-box">
-<div class="diagram-title">频率管理三步流程</div>
-<div class="diagram-steps">
-<div class="diagram-step"><span class="step-num">1</span><strong>划分</strong> Allocation<br><span class="sub">将频段列入频率划分表</span></div>
-<div class="diagram-arrow-h">→</div>
-<div class="diagram-step"><span class="step-num">2</span><strong>分配</strong> Allotment<br><span class="sub">将频道分配给部门/区域</span></div>
-<div class="diagram-arrow-h">→</div>
-<div class="diagram-step"><span class="step-num">3</span><strong>指配</strong> Assignment<br><span class="sub">批准给特定电台使用</span></div>
-</div>
-</div>
-
-
-<div class="callout callout-important"><strong>⚠️ 考试陷阱</strong>
-
-<p>三个词极易混淆。记忆口诀：<strong>划</strong>频段给<strong>业务</strong>、<strong>分</strong>频道给<strong>部门</strong>、<strong>指</strong>频率给<strong>电台</strong>。</p>
-
-</div>
-<h4>监督与处罚</h4>
-
+<h4>频率管理的三个核心概念（"划分"、"分配"、"指配"）<div class="diagram-box"><pre class="diagram-code">graph LR</h4>
 <div class="overflow-x-auto"><table>
 <tr>
 <th>法规文件</th>
@@ -80,15 +55,29 @@
 <td>《中华人民共和国网络安全法》</td>
 <td>网络使用规范：不得危害网络安全、不得侵害他人合法权益</td>
 </tr>
+</table></div>
+<p>B --> C["频率分配<br/>Allotment"]</p>
+<p>C -->|"第二步"| D["将频道分配<br/>给指定部门/区域"]</p>
+<p>D --> E["频率指配<br/>Assignment"]</p>
+<p>E -->|"第三步"| F["批准给特定<br/>电台使用"]</p>
+
+<p>style A fill:#bbdefb,stroke:#1565c0</p>
+<p>style C fill:#fff9c4,stroke:#f57f17</p>
+<p>style E fill:#c8e6c9,stroke:#2e7d32</pre></div></p>
+
+
+<div class="callout callout-important"><strong>⚠️ 考试陷阱</strong>
+
+<p>三个词极易混淆。记忆口诀：<strong>划</strong>频段给<strong>业务</strong>、<strong>分</strong>频道给<strong>部门</strong>、<strong>指</strong>频率给<strong>电台</strong>。</p>
+
+</div>
+<h4>监督与处罚</h4>
+
+<div class="overflow-x-auto"><table>
 <tr>
-<td>概念</td>
-<td>定义</td>
-<td>关键词</td>
-</tr>
-<tr>
-<td>------</td>
-<td>------</td>
-<td>--------</td>
+<th>概念</th>
+<th>定义</th>
+<th>关键词</th>
 </tr>
 <tr>
 <td><strong>划分</strong>（Allocation）</td>
@@ -183,18 +172,15 @@
 
 <h3>1.2 呼号与识别（171题）</h3>
 
-<h4>呼号核发流程</h4>
-<div class="diagram-box">
-<div class="diagram-steps">
-<div class="diagram-step"><span class="step-num">1</span>取得操作证书</div>
-<div class="diagram-arrow-h">→</div>
-<div class="diagram-step"><span class="step-num">2</span>提交设台申请</div>
-<div class="diagram-arrow-h">→</div>
-<div class="diagram-step"><span class="step-num">3</span>审批通过</div>
-<div class="diagram-arrow-h">→</div>
-<div class="diagram-step primary"><span class="step-num">4</span>核发执照+呼号</div>
-</div>
-</div>
+<h4>呼号核发流程<div class="diagram-box"><pre class="diagram-code">flowchart TD</h4>
+<p>A[申请设台] --> B[取得操作证书<br/>A/B/C类]</p>
+<p>B --> C[向无线电管理机构<br/>提交设台申请]</p>
+<p>C --> D[审批通过]</p>
+<p>D --> E[核发电台执照<br/>含呼号]</p>
+<p>E --> F[合法使用]</p>
+
+<p>style B fill:#e3f2fd,stroke:#1565c0</p>
+<p>style E fill:#c8e6c9,stroke:#2e7d32</pre></div></p>
 
 <ul>
 <li>无线电管理机构颁发业余电台执照时，<strong>应当同时</strong>向申请人核发业余电台呼号</li>
@@ -255,17 +241,19 @@
 
 <p>---</p>
 
-<h3>1.3 设台与执照（144题）</h3>
-<div class="diagram-box">
-<div class="diagram-title">设台申请流程</div>
-<div class="diagram-steps">
-<div class="diagram-step">个人申请设台</div>
-<div class="diagram-arrow-h">→</div>
-<div class="diagram-step">省级无线电管理机构</div>
-<div class="diagram-arrow-h">→</div>
-<div class="diagram-step primary">核发执照</div>
-</div>
-</div>
+<h3>1.3 设台与执照（144题）<div class="diagram-box"><pre class="diagram-code">flowchart LR</h3>
+<p>A[个人申请设台] --> B{年龄条件}</p>
+<p>B -->|未成年人| C[可申请规定条件内<br/>的业余无线电台]</p>
+<p>B -->|成年人| C</p>
+<p>A --> D{操作证书}</p>
+<p>D --> E[A/B/C类操作证书]</p>
+<p>A --> F{申请机构}</p>
+<p>F -->|固定台址| G[电台所在地<br/>省级无线电管理机构]</p>
+<p>F -->|无固定台址| H[申请人住所地<br/>省级无线电管理机构]</p>
+
+<p>style C fill:#c8e6c9,stroke:#2e7d32</p>
+<p>style G fill:#e3f2fd,stroke:#1565c0</p>
+<p>style H fill:#e3f2fd,stroke:#1565c0</pre></div></p>
 
 <h4>申请条件</h4>
 
@@ -1047,21 +1035,31 @@
 
 <h2>第三章 无线电技术</h2>
 
-<h3>3.1 频率与波段（127题）</h3>
-<div class="diagram-box">
-<div class="diagram-title">业余频段概览</div>
+<h3>3.1 频率与波段（127题）<div class="diagram-box"></h3>
+<div class="diagram-title">我国业余无线电频段概览</div>
 <div class="diagram-columns two-col">
 <div class="diagram-card sub">
-<strong>HF 短波</strong><br>
-<p>160m 1.8-2.0 · 80m 3.5-3.9 · 40m 7.0-7.2<br></p>
-<p>30m 10.1-10.15 ⚠️次要 · 20m 14.0-14.35<br></p>
-<p>17m 18.068-18.168 ⚠️次要 · 15m 21.0-21.45<br></p>
-<p>12m 24.89-24.99 ⚠️次要 · 10m 28.0-29.7</p>
+<strong>HF 短波</strong>
+<table class="mini-table"><tbody>
+<tr><td>160m</td><td><strong>1.8-2.0</strong> MHz</td><td>主要业务</td></tr>
+<tr><td>80m</td><td><strong>3.5-3.9</strong> MHz</td><td>主要业务</td></tr>
+<tr><td>40m</td><td><strong>7.0-7.2</strong> MHz</td><td>专用(ITU 1/3区)</td></tr>
+<tr><td>30m</td><td><strong>10.1-10.15</strong> MHz</td><td>⚠️ 次要业务</td></tr>
+<tr><td>20m</td><td><strong>14.0-14.35</strong> MHz</td><td>14-14.25专用</td></tr>
+<tr><td>17m</td><td><strong>18.068-18.168</strong> MHz</td><td>⚠️ 次要业务</td></tr>
+<tr><td>15m</td><td><strong>21.0-21.45</strong> MHz</td><td>专用</td></tr>
+<tr><td>12m</td><td><strong>24.89-24.99</strong> MHz</td><td>⚠️ 次要业务</td></tr>
+<tr><td>10m</td><td><strong>28.0-29.7</strong> MHz</td><td>专用</td></tr>
+</tbody></table>
 </div>
 <div class="diagram-card sub">
-<strong>VHF/UHF</strong><br>
-<p>6m 50-54 · 2m 144-148（唯一主要）<br></p>
-<p>0.7m 430-440 ⚠️次要 · 23cm 1240-1300 ⚠️次要</p>
+<strong>VHF / UHF</strong>
+<table class="mini-table"><tbody>
+<tr><td>6m</td><td><strong>50-54</strong> MHz</td><td>主要业务</td></tr>
+<tr><td>2m</td><td><strong>144-148</strong> MHz</td><td>144-146唯一主要</td></tr>
+<tr><td>0.7m</td><td><strong>430-440</strong> MHz</td><td>⚠️ 次要业务</td></tr>
+<tr><td>23cm</td><td><strong>1240-1300</strong> MHz</td><td>⚠️ 次要业务</td></tr>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -1225,20 +1223,26 @@
 
 <h3>3.2 发射与调制（85题）</h3>
 
-<h4>三种基本调制方式</h4>
-<div class="diagram-box">
-<div class="diagram-title">法规层级关系</div>
-<div class="diagram-flow">
-<div class="diagram-node primary">《中华人民共和国无线电管理条例》<br><span class="sub">行政法规 · 最高层级</span></div>
-<div class="diagram-arrow">▼</div>
-<div class="diagram-node">《业余无线电台管理办法》<br><span class="sub">部门规章 · 具体规定</span></div>
-<div class="diagram-arrow">▼</div>
-<div class="diagram-row">
-<div class="diagram-node leaf">《无线电频率划分规定》<br><span class="sub">定义频段与业务</span></div>
-<div class="diagram-node leaf">地方无线电管理机构规定<br><span class="sub">区域性实施细则</span></div>
-</div>
-</div>
-</div>
+<h4>三种基本调制方式<div class="diagram-box"><pre class="diagram-code">graph TD</h4>
+<p>subgraph AM ["调幅 AM"]</p>
+<p>A1["载波幅度随信号变化"] --> A2["带宽 = 2×最高音频"]</p>
+<p>A2 --> A3["效率低·抗干扰差"]</p>
+<p>end</p>
+
+<p>subgraph FM ["调频 FM"]</p>
+<p>B1["载波频率随信号变化"] --> B2["带宽较宽"]</p>
+<p>B2 --> B3["抗干扰好·有门限效应"]</p>
+<p>end</p>
+
+<p>subgraph SSB ["单边带 SSB"]</p>
+<p>C1["只发射一个边带"] --> C2["带宽 = 音频带宽"]</p>
+<p>C2 --> C3["效率高·常用业余通信"]</p>
+<p>C3 --> C4["LSB: 10.1MHz以下<br/>USB: 10.1MHz以上"]</p>
+<p>end</p>
+
+<p>style A3 fill:#ffcdd2,stroke:#c62828</p>
+<p>style B3 fill:#fff9c4,stroke:#f57f17</p>
+<p>style C3 fill:#c8e6c9,stroke:#2e7d32</pre></div></p>
 
 <h4>CW 与数字模式</h4>
 
@@ -2152,18 +2156,7 @@
 <h4>天线术语</h4>
 
 
-<h4>天线类型特点</h4>
-<div class="diagram-box">
-<div class="diagram-title">频率管理三步流程</div>
-<div class="diagram-steps">
-<div class="diagram-step"><span class="step-num">1</span><strong>划分</strong> Allocation<br><span class="sub">将频段列入频率划分表</span></div>
-<div class="diagram-arrow-h">→</div>
-<div class="diagram-step"><span class="step-num">2</span><strong>分配</strong> Allotment<br><span class="sub">将频道分配给部门/区域</span></div>
-<div class="diagram-arrow-h">→</div>
-<div class="diagram-step"><span class="step-num">3</span><strong>指配</strong> Assignment<br><span class="sub">批准给特定电台使用</span></div>
-</div>
-</div>
-
+<h4>天线类型特点<div class="diagram-box"><pre class="diagram-code">graph LR</h4>
 <div class="overflow-x-auto"><table>
 <tr>
 <th>术语</th>
@@ -2211,7 +2204,25 @@
 <td>八木天线</td>
 </tr>
 </table></div>
+<p>A["偶极天线<br/>(Dipole)<br/>半波长·平衡"]</p>
+<p>B["垂直天线<br/>(GP)<br/>1/4波长·全向"]</p>
+<p>C["八木天线<br/>(Yagi)<br/>定向·高增益"]</p>
+<p>end</p>
+
+<p>subgraph 八木结构</p>
+<p>D["反射器<br/>(最长)"] --> E["有源振子<br/>(馈电)"]</p>
+<p>E --> F["引向器<br/>(最短)"]</p>
+<p>end</p>
+
+<p>A -->|方向图| G["∞ 水平8字形"]</p>
+<p>B -->|方向图| H["○ 全向圆形"]</p>
+<p>C -->|方向图| I["→ 单向·高前后比"]</p>
+
+<p>style C fill:#fff3e0,stroke:#e65100</p>
+<p>style I fill:#fff3e0,stroke:#e65100</pre></div></p>
+
 <ul>
+<li>理想点源天线：理论上能将全部射频能量转化为各向同性均匀辐射的假想天线，用作<strong>比较基准</strong></li>
 <li>垂直接地天线（GP）：水平方向无指向性（全向天线）</li>
 <li>半波偶极天线：在垂直于振子方向上有峰值增益</li>
 <li>天线加载：串联电感线圈延长振子电气长度</li>
@@ -2360,20 +2371,25 @@
 
 <h3>4.3 电波传播（21题）</h3>
 
-<h4>传播方式</h4>
-<div class="diagram-box">
-<div class="diagram-title">法规层级关系</div>
-<div class="diagram-flow">
-<div class="diagram-node primary">《中华人民共和国无线电管理条例》<br><span class="sub">行政法规 · 最高层级</span></div>
-<div class="diagram-arrow">▼</div>
-<div class="diagram-node">《业余无线电台管理办法》<br><span class="sub">部门规章 · 具体规定</span></div>
-<div class="diagram-arrow">▼</div>
-<div class="diagram-row">
-<div class="diagram-node leaf">《无线电频率划分规定》<br><span class="sub">定义频段与业务</span></div>
-<div class="diagram-node leaf">地方无线电管理机构规定<br><span class="sub">区域性实施细则</span></div>
-</div>
-</div>
-</div>
+<h4>传播方式<div class="diagram-box"><pre class="diagram-code">graph TD</h4>
+<p>subgraph 电波传播方式</p>
+<p>A[发射天线] --> B{频率选择}</p>
+<p>B -->|LF/MF| C["<b>地波</b><br/>沿地表传播<br/>距离: 几百公里"]</p>
+<p>B -->|HF| D["<b>天波</b><br/>经电离层反射<br/>距离: 数千公里<br/>有静区(跃距)"]</p>
+<p>B -->|VHF/UHF| E["<b>空间波</b><br/>视距传播<br/>距离: 几十公里<br/>受地形影响"]</p>
+<p>end</p>
+
+<p>subgraph 电离层结构</p>
+<p>F[F层 200-400km] --> G[E层 90-130km]</p>
+<p>G --> H[D层 50-90km<br/>白天存在·吸收电波]</p>
+<p>end</p>
+
+<p>D -.->|反射| F</p>
+<p>D -.->|吸收| H</p>
+
+<p>style C fill:#e3f2fd,stroke:#1565c0</p>
+<p>style D fill:#fff3e0,stroke:#e65100</p>
+<p>style E fill:#e8f5e9,stroke:#2e7d32</pre></div></p>
 
 <ul>
 <li><strong>HF 通信</strong>最大的特点：依靠<strong>电离层的反射</strong>（与 VHF/UHF 的本质区别）</li>
@@ -2714,20 +2730,15 @@
 
 <h3>5.4 中继台（5题）</h3>
 
-<h4>中继台基本要求</h4>
-<div class="diagram-box">
-<div class="diagram-title">法规层级关系</div>
-<div class="diagram-flow">
-<div class="diagram-node primary">《中华人民共和国无线电管理条例》<br><span class="sub">行政法规 · 最高层级</span></div>
-<div class="diagram-arrow">▼</div>
-<div class="diagram-node">《业余无线电台管理办法》<br><span class="sub">部门规章 · 具体规定</span></div>
-<div class="diagram-arrow">▼</div>
-<div class="diagram-row">
-<div class="diagram-node leaf">《无线电频率划分规定》<br><span class="sub">定义频段与业务</span></div>
-<div class="diagram-node leaf">地方无线电管理机构规定<br><span class="sub">区域性实施细则</span></div>
-</div>
-</div>
-</div>
+<h4>中继台基本要求<div class="diagram-box"><pre class="diagram-code">graph TD</h4>
+<p>A["用户A<br/>上行发射"] -->|"144MHz: -0.6MHz<br/>430MHz: -5MHz"| B["中继台<br/>接收并转发"]</p>
+<p>C["用户B<br/>上行发射"] --> B</p>
+<p>B -->|"下行频率<br/>高功率发射"| D["覆盖区域内<br/>所有用户接收"]</p>
+
+<p>E["CTCSS 亚音<br/>118.8Hz 常用"] -.->|"避免误触发"| B</p>
+
+<p>style B fill:#fff3e0,stroke:#e65100</p>
+<p>style E fill:#e8eaf6,stroke:#283593</pre></div></p>
 
 <div class="callout callout-important"><strong>⚠️ 中继台频差：144MHz 频段 0.6MHz，430MHz 频段 5MHz</strong>
 
@@ -2793,17 +2804,17 @@
 <li><strong>降轨道（descending pass）</strong>：由<strong>北向南</strong></li>
 </ul>
 
-<h4>线性转发器</h4>
-<div class="diagram-box">
-<div class="diagram-title">频率管理三步流程</div>
-<div class="diagram-steps">
-<div class="diagram-step"><span class="step-num">1</span><strong>划分</strong> Allocation<br><span class="sub">将频段列入频率划分表</span></div>
-<div class="diagram-arrow-h">→</div>
-<div class="diagram-step"><span class="step-num">2</span><strong>分配</strong> Allotment<br><span class="sub">将频道分配给部门/区域</span></div>
-<div class="diagram-arrow-h">→</div>
-<div class="diagram-step"><span class="step-num">3</span><strong>指配</strong> Assignment<br><span class="sub">批准给特定电台使用</span></div>
-</div>
-</div>
+<h4>线性转发器<div class="diagram-box"><pre class="diagram-code">graph LR</h4>
+<p>A["地面电台<br/>上行发射"] -->|"UHF/VHF<br/>上行频率"| B["卫星转发器<br/>线性放大"]</p>
+<p>B -->|"VHF/UHF<br/>下行频率"| C["接收电台<br/>下行接收"]</p>
+<p>B --> D["信标<br/>遥测数据"]</p>
+
+<p>subgraph 注意</p>
+<p>E["上行功率过强<br/>→ 转发器增益压低<br/>→ 影响其他用户"]</p>
+<p>end</p>
+
+<p>style B fill:#e3f2fd,stroke:#1565c0</p>
+<p>style E fill:#ffcdd2,stroke:#c62828</pre></div></p>
 
 <ul>
 <li>将接收到的一定带宽内<strong>所有上行信号</strong>在频谱上<strong>平移</strong>（或平移加反转）后转发</li>
