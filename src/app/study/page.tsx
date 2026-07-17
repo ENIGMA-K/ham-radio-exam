@@ -7,7 +7,6 @@ import { LoadingSpinner } from "@/components/shared/LoadingSpinner";
 
 interface TocItem { id: string; text: string; level: number; }
 
-declare global { interface Window { mermaid?: { initialize: (o: Record<string, unknown>) => void; run: (o?: Record<string, unknown>) => Promise<void>; }; } }
 
 export default function StudyPage() {
   const [content, setContent] = useState("");
@@ -37,23 +36,6 @@ export default function StudyPage() {
       .catch(() => setLoading(false));
   }, [BASE, processHtml]);
 
-  const mermaidLoaded = useRef(false);
-  useEffect(() => {
-    if (mermaidLoaded.current) return;
-    mermaidLoaded.current = true;
-    const s = document.createElement("script");
-    s.src = "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js";
-    s.onload = () => window.mermaid?.initialize({ startOnLoad: false, theme: "default", securityLevel: "loose" });
-    document.head.appendChild(s);
-  }, []);
-
-  useEffect(() => {
-    if (!content || !window.mermaid) return;
-    const t = setTimeout(() => {
-      window.mermaid?.run({ nodes: contentRef.current?.querySelectorAll(".mermaid") ?? [] });
-    }, 200);
-    return () => clearTimeout(t);
-  }, [content]);
 
   useEffect(() => {
     if (!content) return;

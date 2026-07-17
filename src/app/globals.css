@@ -251,3 +251,5 @@ body {
   background: linear-gradient(135deg, #eff6ff, #dbeafe);
 }
 .study-content .callout-note p { color: #1e3a5f; }
+
+.study-content .mermaid-img { max-width: 100%; height: auto; display: block; margin: 1.5rem auto; border-radius: 8px; }
