@@ -12,6 +12,7 @@ export interface RawQuestion {
   C类: number;
   正确积分: number;
   答题次数: number;
+  章节?: string;
 }
 
 export type QuestionType = "single" | "multi";
@@ -19,7 +20,6 @@ export type QuestionType = "single" | "multi";
 export interface Question {
   id: string;
   stem: string;
-  /** 正确答案：单选 "A"，多选 "AB" "ACD" 等 */
   correctAnswer: string;
   optionA: string;
   optionB: string;
@@ -30,10 +30,10 @@ export interface Question {
   categoryA: boolean;
   categoryB: boolean;
   categoryC: boolean;
-  /** 题目类型：单选或多选，默认单选 */
   questionType: QuestionType;
+  chapter: string;
 }
 
 export type QuestionCategory = "A" | "B" | "C";
 
-export type PracticeMode = "sequential" | "random" | "wrong" | "high-error";
+export type PracticeMode = "sequential" | "random" | "wrong" | "high-error" | "chapter";

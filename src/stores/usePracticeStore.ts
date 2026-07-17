@@ -4,6 +4,7 @@ import { useQuestionBankStore } from "./useQuestionBankStore";
 import { useProgressStore } from "./useProgressStore";
 import { shuffleArray, shuffleOptions } from "@/lib/utils";
 import { errorRate } from "@/lib/utils";
+import { CHAPTERS } from "@/lib/constants";
 
 interface PracticeAnswer {
   selectedOption: string | null;
@@ -14,15 +15,15 @@ interface PracticeAnswer {
 interface PracticeState {
   category: QuestionCategory | null;
   mode: PracticeMode;
+  selectedChapter: string | null;
 
   questionQueue: Question[];
-  /** Per-question option shuffle map: display label → original label */
   shuffleMaps: Record<string, Record<string, string>>;
   currentIndex: number;
   answers: Record<string, PracticeAnswer>;
   isSessionActive: boolean;
 
-  initSession: (category: QuestionCategory, mode: PracticeMode) => void;
+  initSession: (category: QuestionCategory, mode: PracticeMode, chapter?: string) => void;
   answerQuestion: (option: string) => void;
   goToNext: () => void;
   goToPrev: () => void;
@@ -33,17 +34,21 @@ interface PracticeState {
 export const usePracticeStore = create<PracticeState>((set, get) => ({
   category: null,
   mode: "sequential",
+  selectedChapter: null,
   questionQueue: [],
   shuffleMaps: {},
   currentIndex: 0,
   answers: {},
   isSessionActive: false,
 
-  initSession: (category: QuestionCategory, mode: PracticeMode) => {
-    const questions = useQuestionBankStore
-      .getState()
-      .getByCategory(category);
+  initSession: (category: QuestionCategory, mode: PracticeMode, chapter?: string) => {
+    let questions = useQuestionBankStore.getState().getByCategory(category);
     const progressMap = useProgressStore.getState().progressMap;
+
+    // Filter by chapter if specified
+    if (chapter) {
+      questions = questions.filter((q) => q.chapter === chapter);
+    }
 
     let queue: Question[];
 
@@ -51,20 +56,16 @@ export const usePracticeStore = create<PracticeState>((set, get) => ({
       case "sequential":
         queue = [...questions];
         break;
-
       case "random":
         queue = shuffleArray(questions);
         break;
-
-      case "wrong": {
+      case "wrong":
         queue = questions.filter((q) => {
           const p = progressMap[q.id];
           return p && p.wrongCount > p.correctCount;
         });
         break;
-      }
-
-      case "high-error": {
+      case "high-error":
         queue = questions
           .filter((q) => {
             const p = progressMap[q.id];
@@ -77,13 +78,13 @@ export const usePracticeStore = create<PracticeState>((set, get) => ({
             return errB - errA;
           });
         break;
-      }
-
+      case "chapter":
+        queue = [...questions]; // Already filtered above
+        break;
       default:
         queue = [...questions];
     }
 
-    // Generate shuffle map for each question
     const shuffleMaps: Record<string, Record<string, string>> = {};
     for (const q of queue) {
       const { mapToOriginal } = shuffleOptions();
@@ -93,6 +94,7 @@ export const usePracticeStore = create<PracticeState>((set, get) => ({
     set({
       category,
       mode,
+      selectedChapter: chapter ?? null,
       questionQueue: queue,
       shuffleMaps,
       currentIndex: 0,
@@ -104,15 +106,11 @@ export const usePracticeStore = create<PracticeState>((set, get) => ({
   answerQuestion: (option: string) => {
     const state = get();
     if (!state.isSessionActive) return;
-
     const question = state.questionQueue[state.currentIndex];
     if (!question) return;
 
-    // Convert display letters to original letters using shuffle map
     const mapToOriginal = state.shuffleMaps[question.id];
-    const originalOption = [...option]
-      .map((ch) => mapToOriginal[ch] ?? ch)
-      .join("");
+    const originalOption = [...option].map((ch) => mapToOriginal[ch] ?? ch).join("");
 
     let isCorrect = false;
     if (question.questionType === "multi") {
@@ -126,14 +124,9 @@ export const usePracticeStore = create<PracticeState>((set, get) => ({
     set({
       answers: {
         ...state.answers,
-        [question.id]: {
-          selectedOption: option,
-          isCorrect,
-          answeredAt: Date.now(),
-        },
+        [question.id]: { selectedOption: option, isCorrect, answeredAt: Date.now() },
       },
     });
-
     useProgressStore.getState().recordAnswer(question.id, isCorrect);
   },
 
@@ -143,22 +136,15 @@ export const usePracticeStore = create<PracticeState>((set, get) => ({
       set({ currentIndex: state.currentIndex + 1 });
     }
   },
-
   goToPrev: () => {
     const state = get();
-    if (state.currentIndex > 0) {
-      set({ currentIndex: state.currentIndex - 1 });
-    }
+    if (state.currentIndex > 0) set({ currentIndex: state.currentIndex - 1 });
   },
-
   jumpTo: (index: number) => {
     const state = get();
-    if (index >= 0 && index < state.questionQueue.length) {
-      set({ currentIndex: index });
-    }
+    if (index >= 0 && index < state.questionQueue.length) set({ currentIndex: index });
   },
-
   endSession: () => {
-    set({ isSessionActive: false, questionQueue: [], shuffleMaps: {}, answers: {} });
+    set({ isSessionActive: false, questionQueue: [], shuffleMaps: {}, answers: {}, selectedChapter: null });
   },
 }));

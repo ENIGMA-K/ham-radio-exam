@@ -11,8 +11,8 @@ import { ModeSelector } from "@/components/practice/ModeSelector";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { usePracticeStore } from "@/stores/usePracticeStore";
 import { useUIStore } from "@/stores/useUIStore";
+import { CHAPTERS, PRACTICE_MODE_LABELS } from "@/lib/constants";
 import type { QuestionCategory, PracticeMode } from "@/models/Question";
-
 
 export default function PracticePage({
   params,
@@ -30,12 +30,13 @@ export default function PracticePage({
   const answers = usePracticeStore((s) => s.answers);
   const isSessionActive = usePracticeStore((s) => s.isSessionActive);
   const mode = usePracticeStore((s) => s.mode);
+  const selectedChapter = usePracticeStore((s) => s.selectedChapter);
+  const shuffleMaps = usePracticeStore((s) => s.shuffleMaps);
   const answerQuestion = usePracticeStore((s) => s.answerQuestion);
   const goToNext = usePracticeStore((s) => s.goToNext);
   const goToPrev = usePracticeStore((s) => s.goToPrev);
   const jumpTo = usePracticeStore((s) => s.jumpTo);
   const endSession = usePracticeStore((s) => s.endSession);
-  const shuffleMaps = usePracticeStore((s) => s.shuffleMaps);
 
   const [showFeedback, setShowFeedback] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -47,15 +48,15 @@ export default function PracticePage({
     : null;
 
   const startSession = useCallback(
-    (cat: QuestionCategory, m: PracticeMode) => {
-      initSession(cat, m);
+    (cat: QuestionCategory, m: PracticeMode, ch?: string) => {
+      initSession(cat, m, ch);
       setSelectedOption(null);
       setShowFeedback(false);
     },
     [initSession]
   );
 
-  // Start session on mount if not active
+  // Start session on mount
   const [initialized, setInitialized] = useState(false);
   useEffect(() => {
     if (validCategory && !isSessionActive && !initialized) {
@@ -70,18 +71,15 @@ export default function PracticePage({
   }
 
   const currentQuestion = questionQueue.length > 0 ? questionQueue[currentIndex] ?? null : null;
-
   const correctCount = Object.values(answers).filter((a) => a.isCorrect).length;
   const wrongCount = Object.values(answers).filter((a) => !a.isCorrect).length;
 
   const handleSelect = (option: string) => {
     if (!currentQuestion || isAnswered) return;
-    // For multi-select: just update visual selection, don't submit yet
     if (currentQuestion.questionType === "multi") {
       setSelectedOption(option);
       return;
     }
-    // For single-select: submit immediately
     setSelectedOption(option);
     setShowFeedback(true);
     answerQuestion(option);
@@ -119,20 +117,44 @@ export default function PracticePage({
     endSession();
     setSelectedOption(null);
     setShowFeedback(false);
-    startSession(validCategory, newMode);
+    startSession(validCategory, newMode, selectedChapter ?? undefined);
   };
 
-  // Guard against uninitialized session
+  const handleChapterChange = (ch: string) => {
+    endSession();
+    setSelectedOption(null);
+    setShowFeedback(false);
+    startSession(validCategory, "chapter", ch);
+  };
+
+  // Guard: loading
   if (!isSessionActive || questionQueue.length === 0) {
     return (
       <AppInitializer>
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-1 flex items-center justify-center">
-            <div className="flex flex-col items-center gap-4">
-              <div className="w-10 h-10 border-4 border-[var(--border)] border-t-[var(--primary)] rounded-full animate-spin" />
-              <p className="text-[var(--muted)] text-sm">加载题目中...</p>
-            </div>
+            {mode === "chapter" && !selectedChapter ? (
+              <div className="text-center space-y-4">
+                <h2 className="text-xl font-bold">选择章节</h2>
+                <div className="grid grid-cols-2 gap-2 max-w-lg mx-auto">
+                  {CHAPTERS.map((ch) => (
+                    <button
+                      key={ch}
+                      onClick={() => handleChapterChange(ch)}
+                      className="px-4 py-3 bg-[var(--surface)] border border-[var(--border)] rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors text-left"
+                    >
+                      {ch}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="flex flex-col items-center gap-4">
+                <div className="w-10 h-10 border-4 border-[var(--border)] border-t-[var(--primary)] rounded-full animate-spin" />
+                <p className="text-[var(--muted)] text-sm">加载题目中...</p>
+              </div>
+            )}
           </main>
           <ModeSelector currentMode={mode} onModeChange={handleModeChange} />
         </div>
@@ -140,11 +162,10 @@ export default function PracticePage({
     );
   }
 
-  const currentAnswer = currentQuestion
-    ? answers[currentQuestion.id]
-    : undefined;
+  const currentAnswer = currentQuestion ? answers[currentQuestion.id] : undefined;
   const isAnswered = currentAnswer !== undefined;
 
+  // Guard: empty queue
   if (questionQueue.length === 0 && isSessionActive) {
     return (
       <AppInitializer>
@@ -154,11 +175,7 @@ export default function PracticePage({
             <EmptyState
               icon="🎉"
               title="没有可练习的题目"
-              description={
-                mode === "wrong"
-                  ? "太棒了！你没有错题需要复习。"
-                  : "当前模式没有匹配的题目。"
-              }
+              description={mode === "wrong" ? "太棒了！你没有错题需要复习。" : "当前章节没有匹配的题目。"}
             />
           </main>
           <ModeSelector currentMode={mode} onModeChange={handleModeChange} />
@@ -171,55 +188,36 @@ export default function PracticePage({
     <AppInitializer>
       <div className="min-h-screen flex flex-col">
         <Header />
-        <PracticeHeader
-          currentIndex={currentIndex}
-          totalQuestions={questionQueue.length}
-          correctCount={correctCount}
-          wrongCount={wrongCount}
-        />
+        <PracticeHeader currentIndex={currentIndex} totalQuestions={questionQueue.length} correctCount={correctCount} wrongCount={wrongCount} />
 
         <main className="flex-1 flex flex-col lg:flex-row max-w-6xl mx-auto w-full">
           <div className="flex-1 p-4 pb-6">
             {currentQuestion ? (
-              <QuestionCard
-                question={currentQuestion}
-                shuffleMap={shuffleMaps[currentQuestion?.id ?? ""]}
-                selectedOption={
-                  isAnswered
-                    ? currentAnswer?.selectedOption ?? null
-                    : selectedOption
-                }
-                showFeedback={isAnswered || showFeedback}
-                onSelect={handleSelect}
-              />
+              <>
+                <QuestionCard
+                  question={currentQuestion}
+                  shuffleMap={shuffleMaps[currentQuestion?.id ?? ""]}
+                  selectedOption={isAnswered ? currentAnswer?.selectedOption ?? null : selectedOption}
+                  showFeedback={isAnswered || showFeedback}
+                  onSelect={handleSelect}
+                />
+
+                {/* Multi-select confirm button */}
+                {currentQuestion.questionType === "multi" && selectedOption && !isAnswered && !showFeedback && (
+                  <button onClick={handleConfirmMulti} className="w-full mt-3 py-3 bg-orange-500 text-white rounded-lg font-medium hover:opacity-90 transition-opacity">
+                    确认提交（已选 {selectedOption.length} 项）
+                  </button>
+                )}
+              </>
             ) : null}
 
-            {/* Multi-select confirm button */}
-            {currentQuestion?.questionType === "multi" &&
-              selectedOption &&
-              !isAnswered &&
-              !showFeedback && (
-                <button
-                  onClick={handleConfirmMulti}
-                  className="w-full mt-3 py-3 bg-orange-500 text-white rounded-lg font-medium hover:opacity-90 transition-opacity"
-                >
-                  确认提交（已选 {selectedOption.length} 项）
-                </button>
-            )}
-
             <div className="flex justify-between mt-4">
-              <button
-                onClick={handlePrev}
-                disabled={currentIndex === 0}
-                className="px-4 py-2 rounded-lg border border-[var(--border)] text-sm font-medium disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors"
-              >
+              <button onClick={handlePrev} disabled={currentIndex === 0}
+                className="px-4 py-2 rounded-lg border border-[var(--border)] text-sm font-medium disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors">
                 上一题
               </button>
-              <button
-                onClick={handleNext}
-                disabled={currentIndex >= questionQueue.length - 1}
-                className="px-4 py-2 rounded-lg bg-[var(--primary)] text-white text-sm font-medium disabled:opacity-30 disabled:cursor-not-allowed hover:opacity-90 transition-opacity"
-              >
+              <button onClick={handleNext} disabled={currentIndex >= questionQueue.length - 1}
+                className="px-4 py-2 rounded-lg bg-[var(--primary)] text-white text-sm font-medium disabled:opacity-30 disabled:cursor-not-allowed hover:opacity-90 transition-opacity">
                 下一题
               </button>
             </div>
@@ -242,11 +240,28 @@ export default function PracticePage({
           )}
         </main>
 
+        {/* Chapter selector (only in chapter mode) */}
+        {mode === "chapter" && (
+          <div className="bg-[var(--surface)] border-t border-[var(--border)] px-4 py-2">
+            <p className="text-xs text-[var(--muted)] mb-2">
+              当前章节：<strong>{selectedChapter}</strong>（{" "}
+              {Object.values(answers).length} / {questionQueue.length} 题）
+            </p>
+            <div className="flex gap-1 flex-wrap">
+              {CHAPTERS.map((ch) => (
+                <button key={ch} onClick={() => handleChapterChange(ch)}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
+                    selectedChapter === ch ? "bg-[var(--primary)] text-white" : "bg-gray-100 text-[var(--muted)] hover:bg-gray-200"
+                  }`}>
+                  {ch}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="lg:hidden fixed bottom-20 right-4 z-50">
-          <button
-            onClick={toggleSidebar}
-            className="w-10 h-10 rounded-full bg-[var(--primary)] text-white shadow-lg flex items-center justify-center text-lg"
-          >
+          <button onClick={toggleSidebar} className="w-10 h-10 rounded-full bg-[var(--primary)] text-white shadow-lg flex items-center justify-center text-lg">
             {sidebarOpen ? "✕" : "☰"}
           </button>
         </div>

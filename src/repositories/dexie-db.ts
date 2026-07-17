@@ -20,8 +20,12 @@ export class RadioExamDB extends Dexie {
       practiceSessions: "++id, category, startedAt",
     });
 
-    // v2: Clear questions to re-seed with questionType field
     this.version(2).upgrade(async (tx) => {
+      await tx.table("questions").clear();
+    });
+
+    // v3: Clear questions to re-seed with chapter field
+    this.version(3).upgrade(async (tx) => {
       await tx.table("questions").clear();
     });
   }

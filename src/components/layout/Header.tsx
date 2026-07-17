@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 const NAV_ITEMS = [
   { href: "/", label: "首页" },
   { href: "/search", label: "检索" },
+  { href: "/study", label: "学习" },
   { href: "/stats", label: "统计" },
 ];
 
@@ -20,7 +21,8 @@ export function Header() {
         </Link>
         <nav className="flex items-center gap-1">
           {NAV_ITEMS.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = pathname === item.href ||
+              (item.href !== "/" && pathname.startsWith(item.href));
             return (
               <Link
                 key={item.href}
