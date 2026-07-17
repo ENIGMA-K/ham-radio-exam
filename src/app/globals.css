@@ -252,4 +252,15 @@ body {
 }
 .study-content .callout-note p { color: #1e3a5f; }
 
-.study-content .mermaid-img { max-width: 100%; height: auto; display: block; margin: 1.5rem auto; border-radius: 8px; }
+
+
+.study-content .mermaid-block {
+  background: #1e293b; border-radius: 12px; padding: 1.25rem;
+  margin: 1.5rem 0; overflow-x: auto;
+  font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+}
+.study-content .mermaid-block pre { background: transparent; border: none; padding: 0; margin: 0; }
+.study-content .mermaid-block code {
+  background: transparent; color: #e2e8f0; font-size: 0.8rem; line-height: 1.6;
+  white-space: pre;
+}
