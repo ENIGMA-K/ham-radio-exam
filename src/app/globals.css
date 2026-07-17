@@ -217,14 +217,7 @@ body {
 .study-content .overflow-x-auto th,
 .study-content .overflow-x-auto td { white-space: nowrap; }
 
-/* Mermaid diagrams */
-.study-content .mermaid {
-  background: white; border-radius: 12px;
-  padding: 1.25rem; margin: 1.5rem 0;
-  border: 1px solid #e2e8f0;
-  text-align: center;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-}
+
 
 /* Scrollbar for study */
 .study-content ::-webkit-scrollbar { height: 6px; }
@@ -254,13 +247,55 @@ body {
 
 
 
-.study-content .mermaid-block {
-  background: #1e293b; border-radius: 12px; padding: 1.25rem;
-  margin: 1.5rem 0; overflow-x: auto;
-  font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+
+/* Diagram boxes */
+.study-content .diagram-box {
+  background: var(--surface); border: 1px solid #e2e8f0; border-radius: 12px;
+  padding: 1.25rem; margin: 1.5rem 0;
 }
-.study-content .mermaid-block pre { background: transparent; border: none; padding: 0; margin: 0; }
-.study-content .mermaid-block code {
-  background: transparent; color: #e2e8f0; font-size: 0.8rem; line-height: 1.6;
-  white-space: pre;
+.study-content .diagram-title {
+  font-size: 0.8rem; font-weight: 700; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem;
+  padding-bottom: 0.5rem; border-bottom: 1px solid #f1f5f9;
+}
+.study-content .diagram-flow { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; }
+.study-content .diagram-steps { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; justify-content: center; }
+.study-content .diagram-columns { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.study-content .diagram-columns.two-col > * { flex: 1; min-width: 200px; }
+.study-content .diagram-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.study-content .diagram-node {
+  background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px;
+  padding: 0.5rem 1rem; text-align: center; font-size: 0.85rem;
+}
+.study-content .diagram-node.primary { background: #eff6ff; border-color: #93c5fd; }
+.study-content .diagram-node.leaf { border-style: dashed; }
+.study-content .diagram-node .sub { font-size: 0.75rem; color: var(--muted); }
+.study-content .diagram-arrow { color: var(--muted); font-size: 1.2rem; text-align: center; }
+.study-content .diagram-arrow-h { color: var(--muted); font-size: 1rem; }
+.study-content .diagram-step {
+  background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px;
+  padding: 0.6rem 0.8rem; text-align: center; font-size: 0.85rem;
+}
+.study-content .diagram-step.primary { background: #eff6ff; border-color: #93c5fd; }
+.study-content .diagram-step .step-num {
+  display: inline-block; width: 1.3rem; height: 1.3rem; line-height: 1.3rem;
+  background: var(--primary); color: white; border-radius: 50%;
+  font-size: 0.7rem; text-align: center; margin-right: 0.3rem;
+}
+.study-content .diagram-card {
+  flex: 1; min-width: 150px; background: #f8fafc;
+  border: 1px solid #e2e8f0; border-radius: 8px;
+  padding: 0.75rem; font-size: 0.85rem; line-height: 1.6;
+}
+.study-content .diagram-card.primary { background: #eff6ff; border-color: #93c5fd; }
+.study-content .diagram-card.sub { background: #fafafa; }
+.study-content .diagram-note {
+  margin-top: 0.75rem; padding: 0.5rem 0.75rem;
+  background: #fef2f2; border-radius: 6px;
+  font-size: 0.8rem; color: #7f1d1d;
+}
+.study-content .diagram-code {
+  background: #1e293b; color: #e2e8f0; padding: 0.75rem;
+  border-radius: 6px; font-size: 0.8rem; overflow-x: auto;
+  font-family: monospace;
 }
