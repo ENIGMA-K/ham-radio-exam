@@ -8,7 +8,7 @@ interface ModeSelectorProps {
   onModeChange: (mode: PracticeMode) => void;
 }
 
-const MODES: PracticeMode[] = ["sequential", "random", "wrong", "high-error"];
+const MODES: PracticeMode[] = ["sequential", "random", "wrong", "high-error", "chapter"];
 
 export function ModeSelector({ currentMode, onModeChange }: ModeSelectorProps) {
   return (
