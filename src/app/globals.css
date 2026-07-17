@@ -229,3 +229,25 @@ body {
 /* Scrollbar for study */
 .study-content ::-webkit-scrollbar { height: 6px; }
 .study-content ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+
+/* Callout boxes (replacing blockquote for reliability) */
+.study-content .callout {
+  border-left: 4px solid #f59e0b;
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  padding: 0.75rem 1rem; border-radius: 0 8px 8px 0;
+  margin: 1.25rem 0;
+}
+.study-content .callout p {
+  margin: 0.2rem 0; font-size: 0.875rem; color: #78350f;
+}
+.study-content .callout-important {
+  border-left-color: #ef4444;
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+}
+.study-content .callout-important p { color: #7f1d1d; }
+.study-content .callout-important strong { color: #dc2626; }
+.study-content .callout-note {
+  border-left-color: #3b82f6;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+}
+.study-content .callout-note p { color: #1e3a5f; }
