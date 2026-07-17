@@ -30,7 +30,7 @@ export default function StudyPage() {
   }, []);
 
   useEffect(() => {
-    fetch(BASE + "/data/study-guide.html")
+    fetch(BASE + "/data/study-guide.html?v=" + Date.now())
       .then((r) => r.text())
       .then((html) => { setContent(processHtml(html)); setLoading(false); })
       .catch(() => setLoading(false));
